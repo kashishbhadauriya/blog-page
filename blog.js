@@ -50,7 +50,7 @@ router.post('/', upload.single('coverimage'), async (req, res) => {
   }
 });
 
-// ✅ View All Blogs (Profile page)
+// ✅ View All Blogs (Profile page)//bss view kr rhe h toh kuch bhi post nhi hogaa 
 router.get('/profile', async (req, res) => {
   try {
     const blogs = await Blog.find().populate('createdBy').sort({ createdAt: -1 });
@@ -75,7 +75,7 @@ router.get('/my-blogs', async (req, res) => {
   }
 });
 
-// ✅ Delete Blog
+// ✅ Delete my Blog 
 router.post('/delete', async (req, res) => {
   try {
     const blog = await Blog.findById(req.body.id);
